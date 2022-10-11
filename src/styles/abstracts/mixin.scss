@@ -1,0 +1,59 @@
+$max: 180;
+
+// margin 편의성
+@mixin margin-effect {
+  @for $i from 1 through $max {
+    $margin: $i * 1px !important;
+    .ma#{$i} {
+      margin: $margin;
+    }
+    .mx#{$i} {
+      margin-left: $margin;
+      margin-right: $margin;
+    }
+    .my#{$i} {
+      margin-top: $margin;
+      margin-bottom: $margin;
+    }
+    .ml#{$i} {
+      margin-left: $margin;
+    }
+    .mr#{$i} {
+      margin-right: $margin;
+    }
+    .mt#{$i} {
+      margin-top: $margin;
+    }
+    .mb#{$i} {
+      margin-bottom: $margin;
+    }
+  }
+}
+
+@include margin-effect();
+
+@mixin padding-effect {
+  @for $i from 1 through $max {
+    $padding: $i 1px !important;
+
+    .pa#{$i} {
+      padding: $padding;
+    }
+
+    .pt#{$i} {
+      padding-top: $i !important;
+    }
+
+    .pb#{$i} {
+      padding-bottom: $padding;
+    }
+    .pl#{$i} {
+      padding-left: $padding;
+    }
+    .pr#{$i} {
+      padding-right: $padding;
+    }
+  }
+}
+
+@include padding-effect();
