@@ -1,6 +1,7 @@
 import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter } from "react-router-dom";
+import { ReactQueryDevtools } from "react-query/devtools";
 import Navbar from "./components/Navbar";
 import RouteList from "./routes/RouteList";
 
@@ -12,7 +13,8 @@ function App() {
       <BrowserRouter>
         <QueryClientProvider client={queryClient}>
           <Navbar />
-          <RouteList />\
+          <RouteList />
+          <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
         </QueryClientProvider>
       </BrowserRouter>
     </div>
