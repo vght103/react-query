@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../components/Home";
 import RQSuperHeroes from "../components/RQSpuerHeroes";
-import RQSuperHero from "../components/RQSuperHero";
+import RQSuperHero from "../components/RQSuperHeroDetail";
 import SuperHeroes from "../components/SuperHeroes";
 
 const RouteList = () => {
