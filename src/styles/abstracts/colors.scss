@@ -1,0 +1,111 @@
+$primary:(
+  "900":#BD8166,
+  "600":#F0A07C,
+  "400":#FFC9B0,
+  "200":#FFEAD7,
+  "100":#FFF7EF,
+);
+
+$greens:(
+  "900":#497956,
+  "600":#68C283,
+  "400":#BCECCA,
+  "200":#DEF7E7,
+  "100":#EAFCF1,
+);
+
+$reds:(
+  "900":#FC6F61,
+  "600":#FF6F61,
+  "400":#FFC5C0,
+  "200":#FFE8E4,
+  "100":#FFF6F5,
+);
+
+$grays: (
+  "50": #FAFBFC,
+  "100": #F8F8F8,
+  "200": #F1F1F1,
+  "300": #E2E2E2,
+  "400": #CACACA,
+  "500": #ACACAC,
+  "600": #7C7C7C,
+  "700": #474747,
+  "800": #2C2C2C,
+  "900": #242424
+);
+
+$blues: (
+  "100": #EAFAFC,
+  "200": #DFF0F7,
+  "400": #B6DDED,
+  "600": #7DC2DF,
+  "900": #359FCD
+);
+
+$optional: (
+  "Track900": #C68B79,
+  "Grass900": #6F8776,
+  "Wooden900": #B5AD88,
+  "Clay900": #746865,
+  "Ivory900": #F5F3ED,
+  "Ivory100" : #FBFAF8,
+);
+
+
+$black:#242424;
+$white:#fff;
+$border-color:map-get($grays, "200");
+$erase-btn:rgba(36,36,36,.2);
+$president:rgba(36,36,36,.3);
+
+@each $key, $value in $optional {
+  .bg-#{$key}{
+    background-color:$value !important;
+  }
+}
+@each $key, $value in $primary {
+  .text-primary#{$key} {
+    color: $value !important;
+  }
+  .bg-primary#{$key} {
+    background-color: $value;
+  }
+}
+
+@each $key, $value in $greens {
+  .text-green#{$key} {
+    color: $value !important;
+  }
+  .bg-green#{$key} {
+    background-color: $value !important;
+  }
+}
+
+@each $key, $value in $reds {
+  .text-red#{$key} {
+    color: $value !important;
+  }
+  .bg-red#{$key} {
+    background-color: $value !important;
+  }
+}
+
+@each $key, $value in $grays {
+  .text-gray#{$key} {
+    color: $value !important;
+  }
+  .bg-gray#{$key} {
+    background-color: $value !important;
+  }
+}
+@each $key, $value in $blues {
+  .text-blue#{$key} {
+    color: $value !important;
+  }
+  .bg-blue#{$key} {
+    background-color: $value !important;
+  }
+}
+
+
