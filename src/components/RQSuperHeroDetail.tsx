@@ -15,8 +15,6 @@ const RQSuperHeroDetail = () => {
 
   const { data, isLoading } = useFetchDetail(String(param.id));
 
-  console.log("data", data);
-
   if (isLoading) {
     return <h2>Loading...</h2>;
   }

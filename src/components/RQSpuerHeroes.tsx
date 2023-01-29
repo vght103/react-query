@@ -1,20 +1,10 @@
-import axios from "axios";
-import React, { useState } from "react";
+import React from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
-import { useFetchQuery } from "../hooks/useFetchQuery";
-
-type RqHeroesType = {
-  id: number;
-  name: string;
-  alterEgo: string;
-};
+import { fetchHeroes, RqHeroesType } from "../api/HeroesApi";
 
 const RQSuperHeroes = () => {
   // 데이터 불러오는 함수
-  const fetchHeroes = () => {
-    return axios.get(`http://localhost:4000/superheroes`);
-  };
 
   // const { isLoading, data, isFetching } = useFetchQuery(["super-heroes"], fetchHeroes);
 
