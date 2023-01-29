@@ -10,7 +10,7 @@ const SuperHeroes = () => {
   const [data, setData] = useState<Array<HeroesType>>([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  console.log("커밋테스트");
+  console.log("커밋테스트 revert 후 3으로 다시 수정");
 
   // 기존 api 호출 방법 (axios)
   const getSuperHeroes = useCallback(async () => {
