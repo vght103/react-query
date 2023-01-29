@@ -9,8 +9,6 @@ const PaginatedQueries = () => {
     return <h2>Loading...</h2>;
   }
 
-  console.log("커밋 테스트");
-
   return (
     <div>
       <ul>
